@@ -4,6 +4,15 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
+//      !данные перехали в тесты
+// export const render = 'Привет мой юный друх!'
+// const result = splitIntoWords('')
+// console.log(result[0]==='привет');
+// console.log(result[1]==='мой');
+// console.log(result[2]==='юный');
+// console.log(result[3]==='друх');
+
+
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
 );

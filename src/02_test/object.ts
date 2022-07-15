@@ -1,30 +1,30 @@
 import React from "react";
 
-type locationType = {
+type LocationType = {
   country: string
-  address: addressType
+  address: AddressType
 }
 
-type addressType = {
+type AddressType = {
   city: string
   streetName: string
 }
 
-type skillsType = {
+type SkillsType = {
   id: number
   breathHold: string
 }
-type freediverType = {
-  id:number
+type FreeDiverType = {
+  id: number
   name: string
   age: number
   beFins: true
-  location: locationType
-  skills: Array<skillsType>
+  location: LocationType
+  skills: Array<SkillsType>
 }
 
-export const freediver:freediverType = {
-  id:1,
+export const freeDiver: FreeDiverType = {
+  id: 1,
   name: 'Молчанов',
   age: 36,
   beFins: true,
@@ -51,7 +51,36 @@ export const freediver:freediverType = {
     },
   ]
 }
-console.log(freediver.name)
-console.log(freediver.location.address.city)
-console.log(freediver.beFins)
-console.log(freediver.skills[1].breathHold)
+console.log(freeDiver.name)
+console.log(freeDiver.location.address.city)
+console.log(freeDiver.beFins)
+console.log(freeDiver.skills[1].breathHold)
+
+export type StreetType = {
+  title: string
+}
+
+export type NewAddressType = {
+  number?: number
+  street: StreetType
+}
+export type HousesType = {
+  builtIn: number
+  repaired: false
+  address: NewAddressType
+
+}
+export type officialBuildingsType={
+  type:string // или можно прописать "HOSPITAL" | "FIRE-STATION"
+  budget:number
+  staffCount:number
+  address:NewAddressType
+}
+
+export type LocalAddressType = {
+  city: string
+  buildings: Array<HousesType>
+  officialBuildings: Array<officialBuildingsType>
+  numberOfCitizens: number
+}
+

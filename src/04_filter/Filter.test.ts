@@ -1,7 +1,7 @@
 import React from "react";
 import {FreeDiverType} from '../02_test/object'
 
-test('Show the completed tasks',()=>{
+test.skip('Show the completed tasks',()=>{
   const tasks=[
     {id:1,title:'help',isDone:true},
     {id:2,title:'help me',isDone:false},

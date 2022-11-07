@@ -1,6 +1,7 @@
 import React from 'react';
 import {creatingWelcomeMessages, PeopleType} from './Map'
 
+
 let people: PeopleType[] = []
 
 beforeEach(() => {
@@ -20,3 +21,5 @@ test('проверить приветственное сообщение', () =>
   expect(welcomeMessages[2]).toBe('Welcome Bivaliy to IT')
 
 })
+
+

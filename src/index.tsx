@@ -3,6 +3,10 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import {sum} from "./01_testHello/01_ts";
+
+let  a =sum
+
 
 //      !данные перехали в тесты
 // export const render = 'Привет мой юный друх!'

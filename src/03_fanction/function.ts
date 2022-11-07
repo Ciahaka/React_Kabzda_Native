@@ -11,7 +11,7 @@ export const sum = (a: number, b: number) => {
 
 
 export const addSkills= (freeDiver: FreeDiverType, skill: string)=> {
-  freeDiver.skills.push({id:new Date().getTime(), title:skill,
+  freeDiver.skills.push({id:new Date().getTime(), breathHold:skill,
 
   })
 }

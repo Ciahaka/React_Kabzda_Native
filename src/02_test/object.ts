@@ -14,7 +14,7 @@ type SkillsType = {
   id: number
   breathHold: string
 }
-type FreeDiverType = {
+export type FreeDiverType = {
   id: number
   name: string
   age: number

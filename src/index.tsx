@@ -4,7 +4,7 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import {sum} from "./01_testHello/01_ts";
-
+import {User} from './06_callback_onClick_onChange_onBlur/Callback'
 let  a =sum
 
 
@@ -22,7 +22,7 @@ const root = ReactDOM.createRoot(
 );
 root.render(
   <React.StrictMode>
-    <App />
+    <User/>
   </React.StrictMode>
 );
 

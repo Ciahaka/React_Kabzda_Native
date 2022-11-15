@@ -1,13 +1,7 @@
 import React from 'react';
+import {ManType} from './Destructuring';
 
-type ManType = {
-  name: string
-  age: number
-  classes: Array<{ title: string }>
-  address: {
-    street: string
-  }
-}
+
 
 let man: ManType
 
@@ -34,5 +28,8 @@ test('', () => {
   // expect(classes.title_1).toBe('1')
   expect(street).toBe('Uskova')
   // expect(title_2).toBe('2')
+})
+
+test('1',()=>{
 
 })

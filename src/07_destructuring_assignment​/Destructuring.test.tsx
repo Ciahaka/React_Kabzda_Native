@@ -1,30 +1,31 @@
 import React from 'react';
 
-type ManType={
+type ManType = {
   name: string
   age: number
-  classes: Array<{title:string}>
-  address:{
-    street:string
+  classes: Array<{ title: string }>
+  address: {
+    street: string
   }
 }
 
-let man:ManType
+let man: ManType
 
-beforeEach(() =>{
-  let man = {
+beforeEach(() => {
+  man = {
     name: 'Alex',
     age: 41,
-    classes: [{title_1: '1'}, {title_2: '2'}],
-    address:{
-      street:'Uskova'
+    classes: [{title: '1'}, {title: '2'}],
+    address: {
+      street: 'Uskova'
     }
-}})
+  }
+})
 
 test('', () => {
 
-  const {name,age, classes, address} = man
-  const{street}=man.address
+  const {name, age, classes, address} = man
+  const {street} = man.address
   // const[title_1, title_2]=man.classes
 
 

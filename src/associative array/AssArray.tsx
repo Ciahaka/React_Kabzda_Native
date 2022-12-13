@@ -1,11 +1,11 @@
 import React from 'react';
 
-const user={
-  name:'Alex',
-  age:2,
-  address:{
-    city:{
-      title:'Polotsk'
+const user = {
+  name: 'Alex',
+  age: 2,
+  address: {
+    city: {
+      title: 'Polotsk'
     }
   }
 }
@@ -15,13 +15,29 @@ console.log(dotNotation)
 const squareNotation = user['address']['city']['title']
 console.log(squareNotation)
 
+const user_1 = {
+  'name': 'Alex',
+  'age': 2,
+  'address': {
+    'city': {
+      'title': 'Polotsk'
+    }
+  }
+}
+const squareNotation_1 = user_1['address']['city']['title']
+console.log(squareNotation_1)
 
-const AssArray = () => {
-  return (
-    <div>
+// let cityN = {}
+// cityN.name = 'minsk'
 
-    </div>
-  );
-};
+const users = []
 
-export default AssArray;
+// const AssArray = () => {
+//   return (
+//     <div>
+//
+//     </div>
+//   );
+// };
+//
+// export default AssArray;

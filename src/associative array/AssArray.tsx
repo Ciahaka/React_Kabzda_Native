@@ -1,43 +1,24 @@
 import React from 'react';
 
-const user = {
-  name: 'Alex',
-  age: 2,
-  address: {
-    city: {
-      title: 'Polotsk'
-    }
-  }
+
+export const usersArray = ['Doc','Grumpy','Happy','Bashful','Sleepy','Sneezy','Dopey']
+
+export const usersObj = {
+  '0':'Doc',
+  '1':'Grumpy',
+  '2':'Happy',
+  '3':'Bashful',
+  '4':'Sleepy',
+  '5':'Sneezy',
+  '6':'Dopey'
 }
 
-const dotNotation = user.address.city.title
-console.log(dotNotation)
-const squareNotation = user['address']['city']['title']
-console.log(squareNotation)
-
-const user_1 = {
-  'name': 'Alex',
-  'age': 2,
-  'address': {
-    'city': {
-      'title': 'Polotsk'
-    }
-  }
+export const users = {
+  '0':'Doc',
+  '1':'Grumpy',
+  '2':'Happy',
+  '3':'Bashful',
+  '4':'Sleepy',
+  '5':'Sneezy',
+  '6':'Dopey'
 }
-const squareNotation_1 = user_1['address']['city']['title']
-console.log(squareNotation_1)
-
-// let cityN = {}
-// cityN.name = 'minsk'
-
-const users = []
-
-// const AssArray = () => {
-//   return (
-//     <div>
-//
-//     </div>
-//   );
-// };
-//
-// export default AssArray;

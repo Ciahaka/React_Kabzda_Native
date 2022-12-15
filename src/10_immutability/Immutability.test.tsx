@@ -1,4 +1,4 @@
-import {UserType} from './Immutability';
+import {LaptopUserType, UserType} from './Immutability';
 
 export const hairDresser = (us: UserType, power: number) => ({...us, hair: us.hair / power})
 
@@ -18,19 +18,55 @@ test('there is less hair', () => {
 
 
 })
-export const relocateUser = (us: UserType,newTitle:string)=>({...us, address: {...us.address,title:newTitle}})
+export const relocateUser = (us: LaptopUserType, newTitle: string) => ({
+  ...us,
+  address: {...us.address, title: newTitle}
+})
 
 test('change address', () => {
 
-  let shaggyUser: UserType = {
+  let devUser: LaptopUserType = {
     name: 'Alex',
     hair: 32,
     address: {
       title: 'Minsk'
+    },
+    laptop: {
+      title: 'Dell'
     }
   }
-  const newRelocate = relocateUser(shaggyUser, 'Polotck')
-  expect(newRelocate.address.title).toBe('Polotck')
-  expect(shaggyUser.address.title).toBe('Minsk')
+  const devNewLocation = relocateUser(devUser, 'Kiev')
+  expect(devNewLocation.address.title).toBe('Kiev')
+  expect(devUser).not.toBe(devNewLocation)
+  expect(devUser.address).not.toBe(devNewLocation.address)
+  expect(devUser.laptop).toBe(devNewLocation.laptop)
+
+})
+
+
+export const updateLaptop= (us: LaptopUserType, newTitle: string) => ({
+  ...us,
+  address: {...us.address, title: newTitle},
+  laptop:{...us.laptop,title:newTitle}
+})
+
+test('update laptop title', () => {
+
+  let devUser: LaptopUserType = {
+    name: 'Alex',
+    hair: 32,
+    address: {
+      title: 'Minsk'
+    },
+    laptop: {
+      title: 'Dell'
+    }
+  }
+  const devNewLocation = updateLaptop(devUser, 'Macbook')
+  expect(devNewLocation.laptop.title).toBe('Macbook')
+  expect(devUser.laptop.title).toBe('Dell')
+  expect(devUser.laptop).not.toBe(devNewLocation.laptop)
+  expect(devUser.laptop.title).not.toBe(devNewLocation.laptop.title)
+  expect(devUser.address.title).toBe('Minsk')
 
 })

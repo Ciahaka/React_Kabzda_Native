@@ -5,6 +5,12 @@ export type UserType={
   hair:number
   address:{title:string}
 }
+export type LaptopType = {
+  title:string
+}
+export type LaptopUserType= UserType & {
+  laptop:LaptopType
+}
 /**
  Ниже приведён пример чистой функции.Не мутирует приходящие данные, создаёт копию и работает с ней. Ретурнит результат обработкию Не создаёт внешних сайд эффектов
  */

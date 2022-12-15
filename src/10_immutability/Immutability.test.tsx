@@ -1,5 +1,9 @@
 import {CompanyType, LaptopUserType, ReaderDevUserType, UserType} from './Immutability';
 
+/**
+ Ниже приведён пример чистой функции.Не мутирует приходящие данные, создаёт копию и работает с ней. Ретурнит результат обработкию Не создаёт внешних сайд эффектов
+ */
+
 const hairDresser = (us: UserType, power: number) => ({...us, hair: us.hair / power})
 
 test('there is less hair', () => {
